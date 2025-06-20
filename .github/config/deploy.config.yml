@@ -1,0 +1,12 @@
+app:
+  name: practice-backend-deploy
+
+repository:
+  name: practice-backend-deployment
+
+deployment:
+  base_dir: /practice/deployment
+  volumes:
+    - /practice/deployment/volumes/gen
+    - /practice/deployment/logs
+  script_path: infraScript/zero_downtime_deploy.py
